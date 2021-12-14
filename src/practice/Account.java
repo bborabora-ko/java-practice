@@ -59,12 +59,17 @@ public class Account {
 		Transaction t = new Transaction();
 
 		t.setKind("입금");
-		t.setAmount(amount);
-		t.setBalance(balance + amount);
+		if(amount <= 0) {
+			System.out.println("금액을 정확히 입력해주세요.");			
+		} else {
+			t.setAmount(amount);
+			t.setBalance(balance + amount);
 
-		transaction.add(t);
+			transaction.add(t);
 
-		balance += amount;
+			balance += amount;
+		}
+		
 
 	}
 

@@ -24,26 +24,10 @@ public class Bank {
 	}
 
 	public Bank() {
-		this.accounts = new ArrayList();
+		this.accounts = new ArrayList<>();
 		this.totalAccount = 0;
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return super.equals(obj);
-	}
-
-//	@Override
-//	public String toString() {		
-////		return "firstName='" + firstName + '\'' +
-////                ", lastName='" + lastName + '\'' +
-////                ", age=" + age;
-//		
-//		
-//		
-//		
-//	}
 
 	public void addAccount(String accountNo, String name) {
 		Account account = new Account();
@@ -62,9 +46,6 @@ public class Bank {
 			}
 		}
 		return null;
-//		for(int i = 0; i < accounts.size(); i++) {
-//			Account a = accounts.get(i);
-//		}
 
 	}
 

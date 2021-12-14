@@ -58,9 +58,9 @@ public class Transaction {
 
 		transactionDate = sdfDate.format(c1.getTime());
 		transactionTime = sdfTime.format(c1.getTime());
-		String kind = "";
-		long amount = 0;
-		long balance = 0;
+		kind = "";
+		amount = 0;
+		balance = 0;
 	}
 
 	@Override
