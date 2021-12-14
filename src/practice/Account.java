@@ -73,12 +73,14 @@ public class Account {
 		Transaction t = new Transaction();
 		t.setKind("출금");
 		t.setAmount(amount);
-		t.setBalance(balance - amount);
-
-		transaction.add(t);
-
-		balance -= amount;
-
+		if(balance - amount < 0) {
+			System.out.println("잔고가 부족합니다.");			
+		} else {
+			t.setBalance(balance - amount);
+			transaction.add(t);
+			balance -= amount;
+		}
+		
 	}
 
 	public long getBalanceMethod() {		

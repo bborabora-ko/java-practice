@@ -42,8 +42,10 @@ public class Main {
 		
 		// 출금하기
 		System.out.println();
-		System.out.println("<출금하기 - 최에게 10000원 출금>");
+		System.out.println("<출금하기 - 최에게 10000원, 20000원 출금>");
 		bank.getAccount("5555").withdraw(10000);
+		System.out.println(a.toString());
+		bank.getAccount("5555").withdraw(20000);
 		System.out.println(a.toString());
 		
 		// 거래내역보기
