@@ -51,16 +51,17 @@ public class Transaction {
 	}
 
 	public Transaction() {
+		//simpleDateFormat을 필드로 빼면 더 편하게 사용할 수 있다.
 		SimpleDateFormat sdfDate = new SimpleDateFormat("yyyy-MM-dd");
 		SimpleDateFormat sdfTime = new SimpleDateFormat("HH:mm:ss");
 
 		Calendar c1 = Calendar.getInstance();
 
-		transactionDate = sdfDate.format(c1.getTime());
-		transactionTime = sdfTime.format(c1.getTime());
-		kind = "";
-		amount = 0;
-		balance = 0;
+		this.transactionDate = sdfDate.format(c1.getTime());
+		this.transactionTime = sdfTime.format(c1.getTime());
+		this.kind = "";
+		this.amount = 0;
+		this.balance = 0;
 	}
 
 	@Override

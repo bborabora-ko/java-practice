@@ -14,11 +14,11 @@ public class Main {
 		bank.addAccount("6666", "김");
 
 		// 전체계좌보기 + 총 계좌수
-		List<Account> list = bank.getAccountsMethod();
+		List<Account> list = bank.getAccounts();
 		for (Account a : list) {
 			System.out.println(a.toString());
 		}
-		System.out.printf("총 계좌 수: %d\n", bank.getTotalAccountMethod());
+		System.out.printf("총 계좌 수: %d\n", bank.getTotalAccount());
 
 		// 소유자명으로 검색해서 계좌정보보기
 		System.out.println();

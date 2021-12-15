@@ -41,11 +41,12 @@ public class Account {
 		this.balance = balance;
 	}
 
+	// 필드의 변수는 this 붙여주기!
 	public Account() {
-		transaction = new ArrayList<>();
-		accountNo = "";
-		name = "";
-		balance = 0;
+		this.transaction = new ArrayList<>();
+		this.accountNo = "";
+		this.name = "";
+		this.balance = 0;
 	}
 
 	@Override
@@ -66,7 +67,6 @@ public class Account {
 			t.setBalance(balance + amount);
 
 			transaction.add(t);
-
 			balance += amount;
 		}
 		

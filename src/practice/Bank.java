@@ -4,24 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Bank {
-	private List<Account> accounts = new ArrayList<>();
-	private int totalAccount = 0;
+	private List<Account> accounts;
+	private int totalAccount;
 
-	public List<Account> getAccounts() {
-		return accounts;
-	}
-
-	public void setAccounts(List<Account> accounts) {
-		this.accounts = accounts;
-	}
-
-	public int getTotalAccount() {
-		return totalAccount;
-	}
-
-	public void setTotalAccount(int totalAccoaunt) {
-		this.totalAccount = totalAccoaunt;
-	}
+	// 항상 겟터와 셋터를 만들 필요는 없다.(간접할당을 위한 것이기에)
+	// 쓰이지도 않는데 불필요한 행동이었음
+	
 
 	public Bank() {
 		this.accounts = new ArrayList<>();
@@ -38,6 +26,9 @@ public class Bank {
 		totalAccount++;
 	}
 
+	// return은 최소한으로 쓰는 것이 좋다.
+	// 책: 이펙티브자바(성능에 대한 책)
+	
 	public Account getAccount(String accountNo) {
 		// 계좌번호로 계좌찾기
 		for (Account a : accounts) {
@@ -60,7 +51,7 @@ public class Bank {
 		return list;
 	}
 
-	public List<Account> getAccountsMethod() {
+	public List<Account> getAccounts() {
 		// 계좌목록 불러오기
 		List<Account> list = new ArrayList<>();
 		for (Account a : accounts) {
@@ -70,7 +61,7 @@ public class Bank {
 	}
 
 	
-	public int getTotalAccountMethod() {
+	public int getTotalAccount() {
 		// 총 계좌수		
 		return accounts.size();
 	}
